@@ -36,7 +36,7 @@ export const getProductById = async (
 ): Promise<void> => {
   try {
     // Validate the ID format first - MongoDB objectIDs have a specific format
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    if (!mongoose.Types.ObjectId.isValid(req.params.id as string)) {
       res.status(400).json({ message: "Invalid product ID format" });
     }
 
@@ -59,14 +59,16 @@ export const getProductsByCategory = async (
 ): Promise<void> => {
   try {
     const validCategories = ["headphones", "speakers", "earphones"];
-    const category = req.params.category.toLowerCase();
+    const category = (req.params.category as string).toLowerCase();
 
     if (!validCategories.includes(category)) {
       res.status(400).json({ message: "Invalid category" });
       return;
     }
 
-    const products = await Product.find({ category }).sort({ createdAt: -1 });
+    const products = await Product.find({
+      category: category as "headphones" | "speakers" | "earphones",
+    }).sort({ createdAt: -1 });
     res.status(200).json(products);
   } catch (error) {
     res

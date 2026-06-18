@@ -53,7 +53,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781693304/XX99_Mark_II_headphones_3rd_Photo_qrh7az.png",
     ],
 
-    isNew: true,
+    isNewArrival: true,
   },
 
   {
@@ -87,7 +87,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781693921/XX99_Mark_I_headphones_3rd_Photo_vmocwd.png",
     ],
 
-    isNew: false,
+    isNewArrival: false,
   },
 
   {
@@ -121,7 +121,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781694348/XX59_headphones_3rd_Photo_z92vbk.png",
     ],
 
-    isNew: false,
+    isNewArrival: false,
   },
 
   {
@@ -156,7 +156,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781694722/ZX9_speaker_3rd_Photo_kbknfw.png",
     ],
 
-    isNew: true,
+    isNewArrival: true,
   },
 
   {
@@ -191,7 +191,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781694903/ZX7_speaker_3rd_Photo_yej8xv.png",
     ],
 
-    isNew: false,
+    isNewArrival: false,
   },
 
   {
@@ -226,7 +226,7 @@ const products = [
       "https://res.cloudinary.com/drdr9gib1/image/upload/v1781695300/YX1_wireless_speaker_3rd_Photo_qurup2.png",
     ],
 
-    isNew: true,
+    isNewArrival: true,
   },
 ];
 
