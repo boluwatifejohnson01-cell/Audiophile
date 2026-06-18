@@ -170,7 +170,7 @@ export const deleteProduct = async (
   res: Response,
 ): Promise<void> => {
   try {
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    if (!mongoose.Types.ObjectId.isValid(req.params.id as string)) {
       res.status(400).json({ message: "invalid product ID" });
       return;
     }
@@ -203,7 +203,7 @@ export const uploadProductImage = async (
     }
 
     // convert buffer to base64 for cloudinary upload
-    const base64 = `data${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
+    const base64 = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
     const result = await uploadImage(base64, "audiophile/products");
 
     res.status(201).json({
